@@ -1,0 +1,13 @@
+{
+  "general": {
+    "hello": "Merhaba",
+    "settings": "Ayarlar",
+    "dark": "Gece",
+    "light": "Gündüz"
+  },
+  "auth": {
+    "register": "Kaydol",
+    "login": "Giriş yap",
+    "logout": "Çıkış yap"
+  }
+}
