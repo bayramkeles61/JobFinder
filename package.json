@@ -2,9 +2,11 @@
   "name": "beyaz",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --open",
+    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 4173"
+    "preview": "vite preview --port 4173",
+    "test": "vitest",
+    "coverage": "vitest --coverage"
   },
   "dependencies": {
     "nprogress": "^0.2.0",

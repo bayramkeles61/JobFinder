@@ -1,4 +1,3 @@
-import path from 'path'
 import { fileURLToPath, URL } from 'url'
 
 import { defineConfig } from 'vite'
@@ -40,10 +39,17 @@ export default defineConfig({
     }),
     ViteFonts({
       google: {
-          families: ["Inter", "Open Sans", "Lato", "Manrope", "Roboto"],
+        families: ["Inter", "Open Sans", "Lato", "Manrope", "Roboto"],
       },
-  }),
+    }),
   ],
+  test: {
+    include: ['test/**/*.test.ts'],
+    environment: "jsdom",
+    deps: {
+      inline: ['@vue', '@vueuse'],
+    },
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

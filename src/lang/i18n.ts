@@ -11,7 +11,7 @@ const messages = {
 } as {}
 
 export const i18n = createI18n({
-  legacy: false,
+  allowComposition: true, 
   fallbackLocale: 'English',
   locale: "English",
   messages
