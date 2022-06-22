@@ -1,9 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="h-screen p-6 px-10">
+  <div class="h-screen">
     <MainNav />
-    <RouterView />
+    <TheHero />
   </div>
 </template>
 

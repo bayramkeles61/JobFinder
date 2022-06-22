@@ -9,24 +9,21 @@ const menuItems = ref<string[]>([
   "Students",
   "Jobs",
 ]);
-// const isLoggedIn = ref<boolean>(false);
-</script>
-<script lang="ts">
-export default {
-  data() {
-    return {
-      isLoggedIn: false,
-    };
-  },
-  methods: {
-    loginUser() {
-      this.isLoggedIn = true;
-    },
-  },
+const isLoggedIn = ref<Boolean>(false);
+
+const loginUser = function () {
+  isLoggedIn.value = true;
 };
+
+const headerHeightClass = computed(() => {
+  return {
+    "h-16": !isLoggedIn.value,
+    "h-32": isLoggedIn.value,
+  };
+});
 </script>
 <template>
-  <header class="w-full text-sm font-semibold">
+  <header :class="['w-full', 'text-sm', 'font-semibold', headerHeightClass]">
     <div class="fixed top-0 left-0 w-full h-16 bg-white">
       <div
         class="flex flex-nowrap h-full px-8 mx-auto border-b border-solid border-gray-50"
@@ -59,7 +56,7 @@ export default {
           />
         </div>
       </div>
-      <SubNav />
+      <SubNav v-if="isLoggedIn" data-test="subnav" />
     </div>
   </header>
 </template>

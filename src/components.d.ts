@@ -13,8 +13,10 @@ declare module '@vue/runtime-core' {
     ProfileImage: typeof import('./components/ProfileImage.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SubNav: typeof import('./components/TheSubNav.vue')['default']
-  }./components/SubNav.vue
+    SubNav: typeof import('./components/SubNav.vue')['default']
+    TheHeadline: typeof import('./components/TheHeadline.vue')['default']
+    TheHero: typeof import('./components/TheHero.vue')['default']
+  }
 }
 
 export {}
