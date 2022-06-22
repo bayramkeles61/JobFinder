@@ -48,7 +48,7 @@ export default defineConfig({
     }),
   ],
   test: {
-    include: ['test/**/*.test.ts'],
+    include: ['tests/**/*.test.ts'],
     environment: "jsdom",
     deps: {
       inline: ['@vue', '@vueuse'],

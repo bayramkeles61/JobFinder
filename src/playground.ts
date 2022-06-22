@@ -1,8 +1,12 @@
-export const evenOrOdd = (number: number) => {
-  if (number % 2 === 0) {
-    return "Even"
-  } else {
-    return "Odd"
-  }
+const favoriteFood = "sushi"
+
+const goodFoods = {
+    sushi: {
+        name: "Sushi",
+        id: "sushi",
+        description: "Sushi is a cool dog.",
+        image: "https://images.unsplash.com/photo-1472099?w=400&q=80"
+    }
 }
-export const multiply = (num1: number, num2: number) => num1 * num2
+
+console.log(goodFoods);
