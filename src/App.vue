@@ -2,11 +2,7 @@
 
 <template>
   <div class="h-screen p-6 px-10">
-    <header>
-      <div class="wrapper rounded">
-        <NavBar />
-      </div>
-    </header>
+    <MainNav />
     <RouterView />
   </div>
 </template>

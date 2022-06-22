@@ -1,5 +1,4 @@
-import { fileURLToPath, URL } from 'url'
-
+import path from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
@@ -10,6 +9,11 @@ import ViteFonts from "vite-plugin-fonts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '~/': `${path.resolve(__dirname, 'src')}/`,
+    },
+  },
   plugins: [
     Vue(),
     WindiCSS(),
@@ -49,10 +53,5 @@ export default defineConfig({
     deps: {
       inline: ['@vue', '@vueuse'],
     },
-  },
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
   }
 })
