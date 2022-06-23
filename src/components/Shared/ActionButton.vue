@@ -21,21 +21,21 @@ const buttonClass = computed(() => {
 });
 </script>
 <template>
-    <div>
-        <button :class="buttonClass">
-            {{ text }}
-        </button>
-    </div>
+    <button :class="buttonClass">
+        {{ text }}
+    </button>
 </template>
 
 <style scoped>
 button {
     @apply px-5 py-3 font-semibold;
 }
+
 .primary {
-    @apply rounded text-white bg-blue-600 hover:shadow hover:shadow-blue-500;
+    @apply rounded text-white bg-blue-600 hover: shadow hover:shadow-blue-500;
 }
+
 .secondary {
-    @apply text-blue-600 hover:bg-blue-600 rounded hover:text-white;
+    @apply text-blue-600 hover: bg-blue-600 hover:text-white;
 }
 </style>

@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SubNav: typeof import('./components/Navigation/SubNav.vue')['default']
+    TextInput: typeof import('./components/Shared/TextInput.vue')['default']
     TheHeadline: typeof import('./components/JobSearch/TheHeadline.vue')['default']
     TheHero: typeof import('./components/JobSearch/TheHero.vue')['default']
   }
