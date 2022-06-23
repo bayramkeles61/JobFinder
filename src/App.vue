@@ -3,7 +3,7 @@
 <template>
     <div class="h-screen">
         <MainNav />
-        <TheHero />
+        <RouterView />
     </div>
 </template>
 
@@ -23,32 +23,44 @@
     scrollbar-color: rgba(180, 180, 180, 0.473);
     scrollbar-width: thin;
 }
+
 :root {
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
 }
+
 ::-webkit-scrollbar {
     width: 6px;
     height: 16px;
     border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: rgba(180, 180, 180, 0.473);
     border-radius: 10px;
 }
+
 input,
 input:focus {
     outline: none !important;
     user-select: auto;
     -webkit-appearance: none;
 }
+
 body {
     min-height: 100vh;
     color: var(--color-text);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50
 }
 
 #nprogress {
@@ -65,6 +77,7 @@ body {
     width: 100%;
     height: 2px;
 }
+
 html.dark {
     background: #121212;
 }
