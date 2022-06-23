@@ -1,11 +1,15 @@
 <script setup lang="ts">
-const menuItems = ref<string[]>([
-    "Teams",
-    "Locations",
-    "Life at Beyaz",
-    "How we hire",
-    "Students",
-    "Jobs",
+interface Route {
+    text: string;
+    url: string;
+}
+const menuItems = ref<Route[]>([
+    { text: "Teams", url: "/" },
+    { text: "Locations", url: "/" },
+    { text: "Life at Beyaz", url: "/" },
+    { text: "How we hire", url: "/" },
+    { text: "Students", url: "/" },
+    { text: "Jobs", url: "/jobs/results" },
 ]);
 const isLoggedIn = ref<Boolean>(false);
 
@@ -21,7 +25,7 @@ const headerHeightClass = computed(() => {
 });
 </script>
 <template>
-    <header :class="['w-full', 'text-sm', 'font-semibold', headerHeightClass]">
+    <header :class="['w-full', 'text-sm', headerHeightClass]">
         <div class="fixed top-0 left-0 w-full h-16 bg-white">
             <div class="
                     flex flex-nowrap
@@ -30,17 +34,17 @@ const headerHeightClass = computed(() => {
                     mx-auto
                     border-b border-solid border-gray-50
                 ">
-                <router-link :to="{ name: 'Home' }" class="flex items-center h-full text-xl">
+                <router-link :to="{ name: 'Home' }" class="flex items-center h-full font-bold text-xl">
                     Beyaz Careers
                 </router-link>
-               
+
                 <nav class="h-full ml-12">
                     <ul class="flex h-full p-0 m-0 list-none">
-                        <li v-for="menuItem in menuItems" :key="menuItem" class="h-full ml-9 first:ml-0"
+                        <li v-for="menuItem in menuItems" :key="menuItem.text" class="h-full ml-9 first:ml-0"
                             data-test="main-nav-list-item">
-                            <a href="/" class="flex items-center h-full py-2.5">
-                                {{ menuItem }}
-                            </a>
+                            <router-link :to="menuItem.url" class="flex font-bold items-center h-full py-2.5">
+                                {{ menuItem.text }}
+                            </router-link>
                         </li>
                     </ul>
                 </nav>

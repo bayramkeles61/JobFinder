@@ -21,6 +21,6 @@ const goToHome = () => {
         <button @click="goToHome" class="border p-2">
             Go to Home Page
         </button>
-
+        {{ experiment }}
     </div>
 </template>

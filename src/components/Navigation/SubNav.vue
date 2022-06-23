@@ -1,5 +1,13 @@
-<script setup lang="ts">
-const onJobResultsPage = ref<Boolean>(true);
+
+<script>
+export default {
+  name: 'SubNav',
+  computed: {
+    onJobResultsPage() {
+      return this.$route.name === 'JobResults'
+    },
+  },
+}
 </script>
 <template>
   <div class="w-full h-16 bg-white border-b border-solid border-gray-500">
