@@ -1,6 +1,6 @@
 import { shallowMount } from "@vue/test-utils"
 import { describe, it, expect } from "vitest"
-import ProfileImage from "~/components/ProfileImage.vue"
+import ProfileImage from "~/components/Navigation/ProfileImage.vue"
 
 describe("ProfileImage", () => {
     it("renders", () => {

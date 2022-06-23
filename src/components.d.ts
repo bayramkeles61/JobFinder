@@ -5,19 +5,18 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    ActionButton: typeof import('./components/ActionButton.vue')['default']
+    ActionButton: typeof import('./components/Shared/ActionButton.vue')['default']
     DarkSwitcher: typeof import('./components/DarkSwitcher.vue')['default']
-    Deney: typeof import('./components/Deney.vue')['default']
-    JobSearchForm: typeof import('./components/JobSearchForm.vue')['default']
+    JobSearchForm: typeof import('./components/JobSearch/JobSearchForm.vue')['default']
     LanguageSwitcher: typeof import('./components/LanguageSwitcher.vue')['default']
-    MainNav: typeof import('./components/MainNav.vue')['default']
+    MainNav: typeof import('./components/Navigation/MainNav.vue')['default']
     NavBar: typeof import('./components/__tests__/NavBar.vue')['default']
-    ProfileImage: typeof import('./components/ProfileImage.vue')['default']
+    ProfileImage: typeof import('./components/Navigation/ProfileImage.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SubNav: typeof import('./components/SubNav.vue')['default']
-    TheHeadline: typeof import('./components/TheHeadline.vue')['default']
-    TheHero: typeof import('./components/TheHero.vue')['default']
+    SubNav: typeof import('./components/Navigation/SubNav.vue')['default']
+    TheHeadline: typeof import('./components/JobSearch/TheHeadline.vue')['default']
+    TheHero: typeof import('./components/JobSearch/TheHero.vue')['default']
   }
 }
 

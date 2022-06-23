@@ -6,8 +6,8 @@ import router from './router'
 import { i18n } from './lang/i18n';
 import { Icon } from "@iconify/vue";
 
-import 'virtual:windi.css'
 import "virtual:fonts.css";
+import 'virtual:windi.css'
 
 const app = createApp(App)
 

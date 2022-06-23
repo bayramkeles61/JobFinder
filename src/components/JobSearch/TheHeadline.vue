@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import nextElementInList from "../utils/nextElementInList";
+import nextElementInList from "../../utils/nextElementInList";
 
 const action = ref<string>("Build");
 const interval = ref<any>(null);
@@ -25,8 +25,11 @@ onBeforeUnmount(() => {
 
 <template>
     <section>
-        <h1 class="font-bold tracking-tighter text-8xl mb-14" data-test="action-phrase">
-            <span :class="actionClasses">{{ action }}</span>
+        <h1
+            class="font-bold tracking-tighter text-8xl mb-14"
+            data-test="action-phrase"
+        >
+            <span :class="actionClasses" class="font-bold">{{ action }}</span>
             <br />
             for everyone
         </h1>

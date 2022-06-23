@@ -5,15 +5,14 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173",
-    "test": "vitest --coverage --ui"
+    "test": "vitest --coverage"
   },
   "dependencies": {
     "nprogress": "^0.2.0",
     "pinia": "^2.0.14",
     "vue": "^3.2.36",
     "vue-i18n": "9",
-    "vue-router": "^4.0.15",
-    "windicss": "^3.5.4"
+    "vue-router": "^4.0.15"
   },
   "devDependencies": {
     "@iconify/types": "^1.1.0",
@@ -41,6 +40,7 @@
     "vite-plugin-fonts": "^0.4.0",
     "vite-plugin-windicss": "^1.8.4",
     "vitest": "^0.15.1",
-    "vue-tsc": "^0.38.1"
+    "vue-tsc": "^0.38.1",
+    "windicss": "^3.5.4"
   }
 }
