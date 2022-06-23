@@ -4,7 +4,13 @@ import ProfileImage from "~/components/ProfileImage.vue"
 
 describe("ProfileImage", () => {
     it("renders", () => {
-        const wrapper = shallowMount(ProfileImage)
+        const wrapper = shallowMount(ProfileImage, {
+            global: {
+                stubs: {
+                    Icon: true
+                }
+            },
+        })
         expect(wrapper.exists()).toBe(true)
-    })  
+    })
 })

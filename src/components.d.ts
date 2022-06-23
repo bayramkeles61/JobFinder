@@ -7,6 +7,8 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ActionButton: typeof import('./components/ActionButton.vue')['default']
     DarkSwitcher: typeof import('./components/DarkSwitcher.vue')['default']
+    Deney: typeof import('./components/Deney.vue')['default']
+    JobSearchForm: typeof import('./components/JobSearchForm.vue')['default']
     LanguageSwitcher: typeof import('./components/LanguageSwitcher.vue')['default']
     MainNav: typeof import('./components/MainNav.vue')['default']
     NavBar: typeof import('./components/__tests__/NavBar.vue')['default']

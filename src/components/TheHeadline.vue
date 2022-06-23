@@ -1,21 +1,20 @@
 <script setup lang="ts">
+import nextElementInList from "../utils/nextElementInList";
+
 const action = ref<string>("Build");
 const interval = ref<any>(null);
 
 const changeTitle = function () {
     interval.value = setInterval(() => {
         const actions = ["Build", "Create", "Design", "Code"];
-        const currentActionIndex = actions.indexOf(action.value);
-        const nextActionIndex = (currentActionIndex + 1) % 4;
-        const nextAction = actions[nextActionIndex];
-        action.value = nextAction;
+        action.value = nextElementInList(actions, action.value);
     }, 3000);
 };
 changeTitle();
 
 const actionClasses = computed(() => {
     return {
-        [action.value.toLowerCase()]: true
+        [action.value.toLowerCase()]: true,
     };
 });
 
@@ -26,9 +25,10 @@ onBeforeUnmount(() => {
 
 <template>
     <section>
-        <h1 class="font-bold tracking-tighter text-8xl mb-14">
+        <h1 class="font-bold tracking-tighter text-8xl mb-14" data-test="action-phrase">
             <span :class="actionClasses">{{ action }}</span>
             <br />
+            for everyone
         </h1>
         <h2 class="text-3xl font-light">Find your next job at Beyaz Corp.</h2>
     </section>
