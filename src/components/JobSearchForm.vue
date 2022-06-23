@@ -1,12 +1,7 @@
 <script setup lang="ts">
-const { modelValue } = defineProps<{
-modelValue?: boolean;
-}>();
 
 </script>
 
 <template>
-  <div>
-Hello   
-  </div>
+    <form>I will be in a better form eventually</form>
 </template>
